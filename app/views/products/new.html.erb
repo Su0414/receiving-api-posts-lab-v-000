@@ -1,5 +1,5 @@
 <h1>New Product</h1>
-<%= form_for @product do |f| %>
+<%= form_for(@product) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
@@ -27,7 +27,7 @@
 
       var values = $(this).serialize();
 
-      var posting = $.product('/products', values);
+      var posting = $.post('/products', values);
 
       posting.done(function(data) {
         // TODO: handle response
