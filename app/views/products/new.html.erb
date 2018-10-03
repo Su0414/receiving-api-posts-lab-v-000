@@ -25,17 +25,7 @@
       //prevent form from submitting the default way
       event.preventDefault();
 
-      var values = $(this).serialize();
-
-      var posting = $.product('/products', values);
-
-      posting.done(function(data) {
-        // TODO: handle response
-        alert(data);
-        var product = data;
-                $("#productName").text(product["name"]);
-                $("#productBody").text(product["description"]);
-        });
+      alert("hacked");
     });
   });
 </script>
